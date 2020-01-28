@@ -62,7 +62,7 @@ function myFunction(artikel) {
 		document.getElementById("Mark").innerHTML = richtig + '/' + count + ' = ' + Math.floor(richtig / count * 100) + '%';
 		document.getElementById("List").style.backgroundColor = "khaki";
 		document.getElementById("List").innerHTML += namen[count - 1];
-		if(count == l) {
+		if(count < l) {
 			document.getElementById("List").innerHTML += ', ';
 		} else {
 			document.getElementById("List").innerHTML += '.';
@@ -76,7 +76,7 @@ function myFunction(artikel) {
 		document.getElementById("Mark").innerHTML = richtig + '/' + count + ' = ' + Math.floor(richtig / count * 100) + '%';
 		document.getElementById("List").style.backgroundColor = "khaki";
 		document.getElementById("List").innerHTML += namen[count - 1];
-		if(count == l) {
+		if(count < l) {
 			document.getElementById("List").innerHTML += ', ';
 		} else {
 			document.getElementById("List").innerHTML += '.';
