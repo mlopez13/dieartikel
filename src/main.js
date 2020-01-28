@@ -1,7 +1,7 @@
 
 var der = ['Hafer', 'Hund', 'Geburtstag', 'Chef', 'Satz', 'Apfel', 'Vorname', 'Familienname', 'Kaffee', 'Tee', 'Zucker', 'Chili', 'Löffel', 'Verbraucher', 'Grad', 'Geschmack', 'Backofen', 'Speck', 'Kürbis', 'Würfel', 'Blumenkohl', 'Strunk', 'Inwer', 'Koriander', 'Topf', 'Arzt', 'Verwandter', 'Nachtisch', 'Neffe', 'Text', 'Film', 'Baum', 'Koffer', 'Computer', 'Lehrer', 'Zug', 'König', 'Regenschirm', 'Bus', 'Mann', 'Kollege', 'Zettel', 'Termin', 'Boxhandschuh', 'Rechtsanwalt', 'Flughafen', 'Dientswagen', 'Tag', 'Zoo', 'Schmerz', 'Durst'],
 	die = ['Erdbeere', 'Patate', 'Pfeige', 'Kotelette', 'Blume', 'Mutter', 'Party', 'Addresse', 'Telefonnumer', 'Sprache', 'Milch', 'Lehrerin', 'Pfanne', 'Mischung', 'Minute', 'Geschirrspulzmaschine', 'Vorbereitungszeit', 'Backzeit', 'Hochzeit', 'Schale', 'Obstschale', 'Verwandte', 'Meinung', 'Aufgabe', 'Schüssel', 'Nichte', 'Häusreinigung', 'Woche', 'Seite', 'Tasche', 'Zeitung', 'Tochter', 'Frau', 'Ingenieurin', 'Programmierin', 'Reporterin', 'Stelle', 'Stadtführung', 'Autowerkstatt', 'Hilfe', 'Informatikerin', 'Zeit', 'Schokolade', 'Tablette'],
-	das = ['Schnitzel', 'Buch', 'Fest', 'Party', 'Dutzend', 'Land', 'Mineralwasser', 'Gebäck', 'Geschirrtuch', 'Geschirr', 'Gewürz', 'Glück', 'Pech', 'Recht', 'Kino', 'Haus', 'Geschenk', 'Jahr', 'Fahrrad', 'Handy', 'Pferd', 'Kind', 'Brett', 'Hilfsverb', 'Bier', 'Formular', 'Flugzeug', 'Projekt'],
+	das = ['Schnitzel', 'Buch', 'Fest', 'Dutzend', 'Land', 'Mineralwasser', 'Gebäck', 'Geschirrtuch', 'Geschirr', 'Gewürz', 'Glück', 'Pech', 'Recht', 'Kino', 'Haus', 'Geschenk', 'Jahr', 'Fahrrad', 'Handy', 'Pferd', 'Kind', 'Brett', 'Hilfsverb', 'Bier', 'Formular', 'Flugzeug', 'Projekt'],
 	plu = ['Verbrauchers', 'Grads', 'Minuten', 'Schwestern', 'Verwandte', 'Bäume', 'Jahren', 'Leute', 'Regenschirme', 'Hilfsverben', 'Boxhandschuhe'];
 
 der = addArtikel('der', der);
@@ -61,7 +61,12 @@ function myFunction(artikel) {
 		document.getElementById("Mark").style.backgroundColor = "gold";
 		document.getElementById("Mark").innerHTML = richtig + '/' + count + ' = ' + Math.floor(richtig / count * 100) + '%';
 		document.getElementById("List").style.backgroundColor = "khaki";
-		document.getElementById("List").innerHTML += namen[count - 1] + ', ';
+		document.getElementById("List").innerHTML += namen[count - 1];
+		if(count == l) {
+			document.getElementById("List").innerHTML += ', ';
+		} else {
+			document.getElementById("List").innerHTML += '.';
+		}
 		setTimeout(folgend(), 3000);
 	} else {
 		count++;
@@ -70,7 +75,12 @@ function myFunction(artikel) {
 		document.getElementById("Mark").style.backgroundColor = "gold";
 		document.getElementById("Mark").innerHTML = richtig + '/' + count + ' = ' + Math.floor(richtig / count * 100) + '%';
 		document.getElementById("List").style.backgroundColor = "khaki";
-		document.getElementById("List").innerHTML += namen[count - 1] + ', ';
+		document.getElementById("List").innerHTML += namen[count - 1];
+		if(count == l) {
+			document.getElementById("List").innerHTML += ', ';
+		} else {
+			document.getElementById("List").innerHTML += '.';
+		}
 		setTimeout(folgend(), 3000);
 	}
 }
