@@ -59,7 +59,7 @@ function myFunction(artikel) {
 		document.getElementById("Result").style.backgroundColor = "chartreuse";
 		document.getElementById("Result").innerHTML = 'Das ist richtig!';
 		document.getElementById("Mark").style.backgroundColor = "gold";
-		document.getElementById("Mark").innerHTML = richtig + '/' + l + ' = ' + Math.floor(richtig / count * 100) + '%';
+		document.getElementById("Mark").innerHTML = richtig + '/' + count + ' = ' + Math.floor(richtig / count * 100) + '%';
 		document.getElementById("List").style.backgroundColor = "khaki";
 		document.getElementById("List").innerHTML += namen[count - 1] + ', ';
 		setTimeout(folgend(), 3000);
@@ -68,7 +68,7 @@ function myFunction(artikel) {
 		document.getElementById("Result").style.backgroundColor = "coral";
 		document.getElementById("Result").innerHTML = 'Das ist falsch...';
 		document.getElementById("Mark").style.backgroundColor = "gold";
-		document.getElementById("Mark").innerHTML = richtig + '/' + l + ' = ' + Math.floor(richtig / count * 100) + '%';
+		document.getElementById("Mark").innerHTML = richtig + '/' + count + ' = ' + Math.floor(richtig / count * 100) + '%';
 		document.getElementById("List").style.backgroundColor = "khaki";
 		document.getElementById("List").innerHTML += namen[count - 1] + ', ';
 		setTimeout(folgend(), 3000);
